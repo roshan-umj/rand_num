@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Number Generator</title>
+    <style>
+        .center {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+        #code {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <span id="code"></span><br>
+</div>
+<script>
+    let code = Math.floor(Math.random() * 33334) * 3 + "";
+    while (code.length < 5) {
+        code = "0" + code;
+    }
+    document.querySelector("#code").innerHTML = code;
+</script>
+</body>
+</html>
